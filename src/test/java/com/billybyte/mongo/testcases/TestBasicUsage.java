@@ -2,12 +2,10 @@ package com.billybyte.mongo.testcases;
 
 import java.math.BigDecimal;
 import java.net.UnknownHostException;
-import java.util.Calendar;
 import java.util.regex.Pattern;
 
 import javax.swing.JFrame;
 
-import com.billybyte.mongo.BasicObject;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -20,10 +18,12 @@ import com.mongodb.WriteConcern;
 import junit.framework.TestCase;
 
 public class TestBasicUsage extends TestCase {
+	private static final boolean dotests = false;
 	private Mongo m=null;
 	private DB db;
 	@Override
 	protected void setUp() throws Exception {
+		if(!dotests)return;
 		if(m==null){
 			try {
 				m = new Mongo( "localhost" );
@@ -42,6 +42,8 @@ public class TestBasicUsage extends TestCase {
 	}
 
 	public void test1(){
+		if(!dotests)return;
+
 		boolean doWrite =false;
 		
 		DBCollection coll = db.getCollection("testCollection");
@@ -76,6 +78,8 @@ public class TestBasicUsage extends TestCase {
 	}
 	
 	public void test2(){
+		if(!dotests)return;
+
 		DBCollection coll = db.getCollection("settles");
 		JFrame frame = new JFrame();
 		
