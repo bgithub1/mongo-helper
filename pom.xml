@@ -50,8 +50,9 @@
  	<dependency>
 		<groupId>com.github.bgithub1</groupId>
 		<artifactId>collectionsstaticmethods</artifactId>
-		<version>c57a5e1473</version>
+		<version>0.1.0</version>
 	</dependency>
+	<!-- <version>c57a5e1473</version> -->
 	<dependency>
 		<groupId>org.mongodb</groupId>
 		<artifactId>mongo-java-driver</artifactId>
